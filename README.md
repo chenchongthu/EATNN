@@ -36,5 +36,24 @@ Train and evaluate the model:
 python EATNN.py
 ```
 
+## Suggestions for parameters
 
-Last Update Date: May 9, 2019
+Th followling important parameters need to be tuned for different datasets, which are:
+
+```
+self.weight1=0.1
+self.weight2=0.1
+self.mu=0.1
+deep.dropout_keep_prob
+```
+
+Specifically, we suggest to tune "self.weight" among \[0.001,0.005,0.01,0.02,0.05,0.1,0.2,0.5]. It's also acceptable to simply make the two weights the same. Generally, this parameter is related to the sparsity of dataset. If the dataset is more sparse, then a small value of negative_weight may lead to a better performance.
+
+The coefficient parameter self.mu determines the importance of different tasks in joint learning. It can be tuned among \[0.1,0.3,0.5,0.7,0.9].
+
+Generally, the performance of our EATNN is very good. You can also contact us if you can not tune the parameters properly.
+
+
+
+
+Last Update Date: May 19, 2020
