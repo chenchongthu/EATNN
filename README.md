@@ -38,7 +38,7 @@ python EATNN.py
 
 ## Suggestions for parameters
 
-Th followling important parameters need to be tuned for different datasets, which are:
+The followling important parameters need to be tuned for different datasets, which are:
 
 ```
 self.weight1=0.1
